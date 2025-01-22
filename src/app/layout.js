@@ -1,28 +1,22 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import Nav from "./components/Nav";
 import "./globals.css";
+import { Kumbh_Sans, Poppins } from "next/font/google";
+import { HeroUIProvider } from "@heroui/react";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const kumbhsans = Kumbh_Sans({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: ["300"] });
 
 export const metadata = {
-  title: "Punnapa Thianchai",
-  description: "Punnapa's portfolio",
+  title: "PT portfolio",
+  description: "Punnapa Thianchai portfolio",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={"text-slate-800 " + poppins.className}>
+        <Nav />
+        <HeroUIProvider>{children}</HeroUIProvider>
       </body>
     </html>
   );
