@@ -1,9 +1,8 @@
 import Nav from "./components/Nav";
 import "./globals.css";
-import { Kumbh_Sans, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { HeroUIProvider } from "@heroui/react";
 
-// const kumbhsans = Kumbh_Sans({ subsets: ["latin"] });
 const poppins = Poppins({ subsets: ["latin"], weight: ["300"] });
 
 export const metadata = {
